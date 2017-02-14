@@ -1,0 +1,52 @@
+starlist = makeSample()
+
+# print "here2"
+#
+# for i in range(len(starlist)):
+#     starlist[i].pop('e_B-V', None)
+#     starlist[i].pop('covMatrix', None)
+#     starlist[i].pop('Flag1', None)
+#     starlist[i].pop('Flag2', None)
+#     starlist[i].pop('Flag3', None)
+#     starlist[i].pop('pmDE', None)
+#     starlist[i].pop('e_pmDE', None)
+#     starlist[i].pop('e_pmRA', None)
+#     starlist[i].pop('e_DErad', None)
+#     starlist[i].pop('e_Hpmag', None)
+#     starlist[i].pop('e_Plx', None)
+#     starlist[i].pop('V-I', None)
+#     starlist[i].pop('Member', None)
+#     starlist[i].pop('e_RArad', None)
+#     starlist[i].pop('HIP', None)
+#     starlist[i].pop('muAlphacosDelta', None)
+#     starlist[i].pop('nc', None)
+#     starlist[i].pop('Plx', None)
+#     starlist[i].pop('Hpmag', None)
+#     starlist[i].pop('None', None)
+#     starlist[i].pop('ABL', None)
+#     starlist[i].pop('RArad', None)
+#     starlist[i].pop('vrSource', None)
+#     starlist[i].pop('B-V', None)
+#     starlist[i].pop('sinl', None)
+#     starlist[i].pop('cosl', None)
+#     starlist[i].pop('sinb', None)
+#     starlist[i].pop('cosb', None)
+#     starlist[i].pop('TYC', None)
+#     starlist[i].pop('cosb', None)
+#     starlist[i].pop('x', None)
+#     starlist[i].pop('y', None)
+#     starlist[i].pop('z', None)
+#     starlist[i].pop('pmRA', None)
+#     starlist[i].pop('DErad', None)
+#     starlist[i].pop('obsMg', None)
+#
+# print type(starlist[0])
+# print len(starlist[0])
+# print starlist[0].keys()
+#
+# myfile = open("Hyades", 'w')
+# wr = csv.writer(myfile)
+#
+# for star in starlist:
+#     mylist = [star['mg'], star['l'], star['b'], star['pi'], star['epsPi'], star['muAlpha'], star['epsMuAlpha'], star['muDelta'], star['epsMuDelta'], star['vr'], star['epsVr'], star['bp-rp']]
+#     wr.writerow(mylist)
