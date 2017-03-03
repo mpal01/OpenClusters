@@ -287,8 +287,7 @@ def getWeight(c,minColour,maxColour):
 # Distributions for magnitud, space, velocity, dispersion in distance and proper motions
 def Fmag(star,r0,spline,sigmaM): return exp(-0.5 *  pow((star['mg'] - (5*log10(r0)) + 5 - AgCluster - (interpolate.splev(star['bp-rp'],spline))) / sigmaM, 2))
 def Fspace(star,r0,p,sigmaS): return exp (-0.5 * (p['R^2'] + pow(r0,2) - (2 * r0 * p['R'] *  star['cbprime'] * star['clprime'])) / (sigmaS**2) )
-#def Fvel(star,muAlpha0,muDelta0,p): return exp (-0.5 *  pow((muAlpha0 - p['muAlphaMean']) / p['sigmaMuAlpha'], 2)) * exp (-0.5 *  pow((muDelta0 - p['muDeltaMean']) / p['sigmaMuDelta'], 2)) 
-def Fvel(star,muAlpha0,muDelta0,p): return exp (-0.5 *  pow((muAlpha0 - p['muAlphaMean']) / p['sigmaMuAlpha'], 2)) * exp (-0.5 *  pow((muDelta0 - p['muDeltaMean']) / p['sigmaMuDelta'], 2)) 
+def Fvel(star,muAlpha0,muDelta0,p): return exp (-0.5 *  pow((muAlpha0 - p['muAlphaMean']) / p['sigmaMuAlpha'], 2)) * exp (-0.5 *  pow((muDelta0 - p['muDeltaMean']) / p['sigmaMuDelta'], 2))
 
 
 def jacobian(star,r0): return pow(r0,2)* star['cbprime'] 

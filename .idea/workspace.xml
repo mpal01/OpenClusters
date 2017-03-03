@@ -2,22 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02943111-152e-4c82-a4ce-d84323dedd09" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HtoVmag.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HyadesHRInner10.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IsochroneHyades.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IsochronePleiades.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IsochronePleiades1.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PerrymanData.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PerrymanTable2.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PleiadesVr.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PleiadesVrAll.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Plot.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Test.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hip2.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hip2a.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hip_old.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tablea1.dat" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Functions3.py" afterPath="$PROJECT_DIR$/Functions3.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ML3.py" afterPath="$PROJECT_DIR$/ML3.py" />
     </list>
@@ -37,8 +21,8 @@
       <file leaf-file-name="Functions3.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Functions3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="263">
+              <caret line="296" column="0" lean-forward="false" selection-start-line="296" selection-start-column="0" selection-end-line="296" selection-end-column="0" />
               <folding>
                 <element signature="e#237#247#0" expanded="true" />
               </folding>
@@ -49,11 +33,9 @@
       <file leaf-file-name="ML3.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ML3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="133" column="5" lean-forward="false" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
-              <folding>
-                <element signature="e#857#2164#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="311">
+              <caret line="97" column="26" lean-forward="true" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -101,8 +83,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/OldCode.py" />
-        <option value="$PROJECT_DIR$/Functions3.py" />
         <option value="$PROJECT_DIR$/ML3.py" />
+        <option value="$PROJECT_DIR$/Functions3.py" />
       </list>
     </option>
   </component>
@@ -361,9 +343,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#857#2164#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -382,10 +362,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2016.3/python_stubs/622367854/scipy/special/_ufuncs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="1277" column="4" lean-forward="false" selection-start-line="1277" selection-start-column="4" selection-end-line="1277" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Functions3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="263">
+          <caret line="296" column="0" lean-forward="false" selection-start-line="296" selection-start-column="0" selection-end-line="296" selection-end-column="0" />
           <folding>
             <element signature="e#237#247#0" expanded="true" />
           </folding>
@@ -394,11 +382,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ML3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="133" column="5" lean-forward="false" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
-          <folding>
-            <element signature="e#857#2164#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="311">
+          <caret line="97" column="26" lean-forward="true" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>

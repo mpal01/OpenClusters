@@ -84,16 +84,21 @@ def calculatesNormalizationCoeff(p, c, minColour, maxColour, spline, outputC):
     sigmaS, sigmaM =  getSigmaSSigmaMforC(p,minColour,maxColour)
     weight = getWeight(c,minColour,maxColour)
 
+    mlim = c['mlim']
+    Rsquared = p['R^2']
+    R = p['R']
+    sigmaSsquared = pow(sigmaS,2)
+    delimiter = sqrt(2)*sigmaM
 
     def Ir(r0):
-        def Ib(b0): 
-            def Il(l0): return  exp((-0.5 * (p['R^2']  + r0 ** 2 - 2 * r0 * p['R'] *  cos(b0) *  cos(l0)) / (pow(sigmaS,2)) ))
+        def Ib(b0):
+            def Il(l0): return exp(-0.5 * (Rsquared + r0 ** 2 - 2 * r0 * R *  cos(b0) * cos(l0)) / sigmaSsquared)
             integralL = quad(Il, -0.04, 0.04)
-            return integralL[0] *  cos(b0) 
+            return integralL[0] *  cos(b0)
         def Ibprp(bprp):  
             Mh = interpolate.splev(bprp,spline)
             m0= Mh + (5*log10(r0)) - 5 + AgCluster
-            p = sigmaM*erfc(-((c['mlim']- m0)  /(sqrt(2)*sigmaM)))
+            p = sigmaM*erfc(-((mlim - m0) / delimiter))
             return p
         
         integralB = quad(Ib, -0.04, 0.04)
@@ -122,7 +127,6 @@ def calculatesUnnormaLikelihood(p, c, star, spline, outputstars, CsinEps):
     weight = getWeight(c,thisCmin,thisCmax)
 
 
-    #t0 = time.time()
 
 
     def Imu(muAlpha0,muDelta0): return Fvel(star,muAlpha0,muDelta0,p)  * epsMuAlpha(star,muAlpha0) * epsMuDelta(star,muDelta0)
@@ -131,7 +135,6 @@ def calculatesUnnormaLikelihood(p, c, star, spline, outputstars, CsinEps):
     def Ir(r0): return jacobian(star,r0) * Fspace(star,r0,p,sigmaS) * Fmag(star,r0,spline,sigmaM) * epsPi(star,r0) * integralMu[0]
     integralR = quad(Ir,10, p['R']+50)
 
-    #print time.time() - t0
 
     outputstars.put( weight *  integralR[0]  / (CsinEps * star['epsPi'] *star['epsMuAlpha'] * star['epsMuDelta']))
 
@@ -149,19 +152,23 @@ def LikelihoodFunction(starlist, p, c):
     else:
         outputC, outputstars, procs, Plist = Queue(), Queue(), [], []
         spline = getSpline(bins,p)
-        
+
+        t0 = time.time()
+
         for colourRange in bins:
             procs = startProcess(procs, target=calculatesNormalizationCoeff, args=(p, c, colourRange[0], colourRange[1], spline, outputC))
         CsinEps = outputC.get()+outputC.get()+outputC.get()+outputC.get()
         for P in procs: P.join()
         procs=[]
-        
+
+        print time.time() - t0
+
         for star in starlist:
             star=transformCoordinates(star,c)
             procs = startProcess(procs, target=calculatesUnnormaLikelihood, args=(p, c, star, spline, outputstars, CsinEps))
         
         for P in procs: P.join()
-        
+
         
         for i in xrange (0,len(starlist),1):  Plist.append(  logD(outputstars.get(),star)  )
         finalSum = sum(Plist)
